@@ -19,12 +19,19 @@ start_wg() {
 	wg set wg0 private-key /tmp/privatekey
 	[ ! $listenport ] || wg set wg0 listen-port $listenport
 	[ ! $keepalive ] && keepalive=0
-	if [ ! $presharedkey ]; then
+	
+	if [ ! $presharedkey ] && [ ! $peerip ]; then
+		wg set wg0 peer $peerkey persistent-keepalive $keepalive allowed-ips $allowedips
+	elif [ ! $presharedkey ]; then
 		wg set wg0 peer $peerkey persistent-keepalive $keepalive allowed-ips $allowedips endpoint $peerip
+	elif [ ! $peerip ]; then
+		echo "$presharedkey" > /tmp/presharedkey
+		wg set wg0 peer $peerkey preshared-key /tmp/presharedkey persistent-keepalive $keepalive allowed-ips $allowedips
 	else
 		echo "$presharedkey" > /tmp/presharedkey
 		wg set wg0 peer $peerkey preshared-key /tmp/presharedkey persistent-keepalive $keepalive allowed-ips $allowedips endpoint $peerip
 	fi
+	
 	iptables -t nat -A POSTROUTING -o wg0 -j MASQUERADE
 	ifconfig wg0 up
 }
