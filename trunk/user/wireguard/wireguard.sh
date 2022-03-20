@@ -17,7 +17,7 @@ start_wg() {
 	ip addr add $localip dev wg0
 	echo "$privatekey" > /tmp/privatekey
 	wg set wg0 private-key /tmp/privatekey
-	[ ! $listenport ] || wg set wg0 listen-port 51820
+	[ ! $listenport ] || wg set wg0 listen-port $listenport
 	[ ! $keepalive ] && keepalive=0
 	if [ ! $presharedkey ]; then
 		wg set wg0 peer $peerkey persistent-keepalive $keepalive allowed-ips $allowedips endpoint $peerip
