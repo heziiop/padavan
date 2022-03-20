@@ -13,7 +13,8 @@ start_wg() {
 	ip addr add $localip dev wg0
 	echo "$privatekey" > /tmp/privatekey
 	wg set wg0 private-key /tmp/privatekey
-	wg set wg0 peer $peerkey persistent-keepalive 25 allowed-ips 0.0.0.0/0 endpoint $peerip
+	echo "$presharedkey" > /tmp/presharedkey
+	wg set wg0 peer $peerkey preshared-key /tmp/presharedkey persistent-keepalive $keepalive allowed-ips $allowedips endpoint $peerip
 	iptables -t nat -A POSTROUTING -o wg0 -j MASQUERADE
 	ifconfig wg0 up
 }
