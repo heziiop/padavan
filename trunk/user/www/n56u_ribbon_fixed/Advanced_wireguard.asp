@@ -213,7 +213,7 @@ function done_validating(action){
 
 										</tr>
 										<tr>
-										<th>默认持续0秒，NAT后建议25（可选） </th>
+										<th>持续Keep-Alive，默认为0秒，在NAT后建议值为25（可选） </th>
 				<td>
 					<input type="text" class="input" name="wireguard_keepalive" id="wireguard_keepalive" style="width: 250px" value="<% nvram_get_x("","wireguard_keepalive"); %>" />
 				</td>
