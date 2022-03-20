@@ -166,56 +166,56 @@ function done_validating(action){
 										<tr>
 										<th>本机私钥 </th>
 				<td>
-					<input type="text" class="input" name="wireguard_localkey" id="wireguard_localkey" style="width: 200px" value="<% nvram_get_x("","wireguard_localkey"); %>" />
+					<input type="text" class="input" name="wireguard_localkey" id="wireguard_localkey" style="width: 250px" value="<% nvram_get_x("","wireguard_localkey"); %>" />
 				</td>
 
 										</tr>
 										<tr>
 										<th>本机监听端口（可选） </th>
 				<td>
-					<input type="text" class="input" name="wireguard_listenport" id="wireguard_listenport" style="width: 200px" value="<% nvram_get_x("","wireguard_listenport"); %>" />
+					<input type="text" class="input" name="wireguard_listenport" id="wireguard_listenport" style="width: 250px" value="<% nvram_get_x("","wireguard_listenport"); %>" />
 				</td>
 
 										</tr>
 										<tr>
 										<th>本机接口IP（10.1.1.2/32）</th>
 				<td>
-					<input type="text" class="input" name="wireguard_localip" id="wireguard_localip" style="width: 200px" value="<% nvram_get_x("","wireguard_localip"); %>" />
+					<input type="text" class="input" name="wireguard_localip" id="wireguard_localip" style="width: 250px" value="<% nvram_get_x("","wireguard_localip"); %>" />
 				</td>
 
 										</tr>
 										<tr>
 										<th>对端公钥 </th>
 				<td>
-					<input type="text" class="input" name="wireguard_peerkey" id="wireguard_peerkey" style="width: 200px" value="<% nvram_get_x("","wireguard_peerkey"); %>" />
+					<input type="text" class="input" name="wireguard_peerkey" id="wireguard_peerkey" style="width: 250px" value="<% nvram_get_x("","wireguard_peerkey"); %>" />
 				</td>
 				
 										</tr>
 										<tr>
 										<th>预共享秘钥（可选） </th>
 				<td>
-					<input type="text" class="input" name="wireguard_presharedkey" id="wireguard_presharedkey" style="width: 200px" value="<% nvram_get_x("","wireguard_presharedkey"); %>" />
+					<input type="text" class="input" name="wireguard_presharedkey" id="wireguard_presharedkey" style="width: 250px" value="<% nvram_get_x("","wireguard_presharedkey"); %>" />
 				</td>
 				
 										</tr>
 										<tr>
 										<th>允许的IP（192.168.9.0/24,10.1.1.0/24） </th>
 				<td>
-					<input type="text" class="input" name="wireguard_allowedips" id="wireguard_allowedips" style="width: 200px" value="<% nvram_get_x("","wireguard_allowedips"); %>" />
+					<input type="text" class="input" name="wireguard_allowedips" id="wireguard_allowedips" style="width: 250px" value="<% nvram_get_x("","wireguard_allowedips"); %>" />
 				</td>
 				
 										</tr>
 										<tr>
 										<th>对端公网域名或IP:端口（可选） </th>
 				<td>
-					<input type="text" class="input" name="wireguard_peerip" id="wireguard_peerip" style="width: 200px" value="<% nvram_get_x("","wireguard_peerip"); %>" />
+					<input type="text" class="input" name="wireguard_peerip" id="wireguard_peerip" style="width: 250px" value="<% nvram_get_x("","wireguard_peerip"); %>" />
 				</td>
 
 										</tr>
 										<tr>
 										<th>默认持续0秒，NAT后建议25（可选） </th>
 				<td>
-					<input type="text" class="input" name="wireguard_keepalive" id="wireguard_keepalive" style="width: 200px" value="<% nvram_get_x("","wireguard_keepalive"); %>" />
+					<input type="text" class="input" name="wireguard_keepalive" id="wireguard_keepalive" style="width: 250px" value="<% nvram_get_x("","wireguard_keepalive"); %>" />
 				</td>
 				
 										</tr>
@@ -243,4 +243,3 @@ function done_validating(action){
 </div>
 </body>
 </html>
-
