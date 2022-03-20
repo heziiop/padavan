@@ -9,7 +9,7 @@ start_wg() {
 	allowedips="$(nvram get wireguard_allowedips)"
 	peerip="$(nvram get wireguard_peerip)"
 	keepalive="$(nvram get wireguard_keepalive)"
-	logger -t "WIREGUARD" "正在启动wireguard"
+	logger -t "WIREGUARD" "正在启动WireGuard"
 	ifconfig wg0 down
 	ip link del dev wg0
 	ip link add dev wg0 type wireguard
@@ -33,7 +33,7 @@ start_wg() {
 stop_wg() {
 	ifconfig wg0 down
 	ip link del dev wg0
-	logger -t "WIREGUARD" "正在关闭wireguard"
+	logger -t "WIREGUARD" "正在关闭WireGuard"
 	}
 
 
