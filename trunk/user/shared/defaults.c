@@ -768,7 +768,7 @@ struct nvram_pair router_defaults[] = {
 	{ "wyy_flac", "0" },
 	{ "wyy_staticnum_x", "0" },
 	
-	/*Zerotier*/
+	/*ZeroTier*/
 	{ "zerotier_enable", "0" },
 	{ "zerotier_id", "" },
 	{ "zerotier_nat", "0" },
@@ -800,7 +800,7 @@ struct nvram_pair router_defaults[] = {
 	{ "reboot_schedule", "00000000000" },
 
 #if defined(APP_WIREGUARD)
-	/*WIREGUARD*/
+	/*WireGuard*/
 	{ "wireguard_enable", "0" },
 	{ "wireguard_localkey", "" },
 	{ "wireguard_listenport", "" },
