@@ -165,7 +165,7 @@ function done_validating(action){
 										</tr>
 
 										<tr>
-										<th>本机密钥key </th>
+										<th>本机私钥key </th>
 				<td>
 					<input type="text" class="input" name="wireguard_localkey" id="wireguard_localkey" style="width: 200px" value="<% nvram_get_x("","wireguard_localkey"); %>" />
 				</td>
@@ -173,7 +173,15 @@ function done_validating(action){
 										</tr>
 
 										<tr>
-										<th>本机IP（格式 10.0.0.2/24）</th>
+										<th>本机监听端口 </th>
+				<td>
+					<input type="text" class="input" name="wireguard_listenport" id="wireguard_listenport" style="width: 300px" value="<% nvram_get_x("","wireguard_listenport"); %>" />
+				</td>
+
+										</tr>
+
+										<tr>
+										<th>本机接口的IP（10.1.1.2/32）</th>
 				<td>
 					<input type="text" class="input" name="wireguard_localip" id="wireguard_localip" style="width: 200px" value="<% nvram_get_x("","wireguard_localip"); %>" />
 				</td>
@@ -181,18 +189,41 @@ function done_validating(action){
 										</tr>
 									
 										<tr>
-										<th>对端密钥key </th>
+										<th>对端公钥key </th>
 				<td>
 					<input type="text" class="input" name="wireguard_peerkey" id="wireguard_peerkey" style="width: 200px" value="<% nvram_get_x("","wireguard_peerkey"); %>" />
 				</td>
-
+				
+										</tr>
+									
+										<tr>
+										<th>预共享秘钥key </th>
+				<td>
+					<input type="text" class="input" name="wireguard_presharedkey" id="wireguard_presharedkey" style="width: 500px" value="<% nvram_get_x("","wireguard_presharedkey"); %>" />
+				</td>
+				
+										</tr>
+									
+										<tr>
+										<th>允许的IP（23.5.6.0/24,10.1.1.0/24） </th>
+				<td>
+					<input type="text" class="input" name="wireguard_allowedips" id="wireguard_allowedips" style="width: 400px" value="<% nvram_get_x("","wireguard_allowedips"); %>" />
+				</td>
+				
 										</tr>
 										<tr>
-										<th>对端ip:端口（格式 223.5.6.6:4900)</th>
+										<th>对端域名:端口（24.5.5.5:5100）</th>
 				<td>
 					<input type="text" class="input" name="wireguard_peerip" id="wireguard_peerip" style="width: 200px" value="<% nvram_get_x("","wireguard_peerip"); %>" />
 				</td>
 
+										</tr>
+										<tr>
+										<th>Keep-Alive秒数，NAT后建议值为25</th>
+				<td>
+					<input type="text" class="input" name="wireguard_keepalive" id="wireguard_keepalive" style="width: 350px" value="<% nvram_get_x("","wireguard_keepalive"); %>" />
+				</td>
+				
 										</tr>
 										<tr>
 											<td colspan="4" style="border-top: 0 none;">
