@@ -149,7 +149,7 @@ function done_validating(action){
 
 
 										<tr>
-										<th width="30%" style="border-top: 0 none;">启用WireGuard客户端</th>
+										<th width="30%" style="border-top: 0 none;">启用WireGuard</th>
 											<td style="border-top: 0 none;">
 													<div class="main_itoggle">
 													<div id="wireguard_enable_on_of">
@@ -163,7 +163,6 @@ function done_validating(action){
 											</td>
 
 										</tr>
-
 										<tr>
 										<th>本机私钥 </th>
 				<td>
@@ -171,7 +170,6 @@ function done_validating(action){
 				</td>
 
 										</tr>
-
 										<tr>
 										<th>本机监听端口（可选） </th>
 				<td>
@@ -179,7 +177,6 @@ function done_validating(action){
 				</td>
 
 										</tr>
-
 										<tr>
 										<th>本机接口IP（10.1.1.2/32）</th>
 				<td>
@@ -187,7 +184,6 @@ function done_validating(action){
 				</td>
 
 										</tr>
-									
 										<tr>
 										<th>对端公钥 </th>
 				<td>
@@ -195,7 +191,6 @@ function done_validating(action){
 				</td>
 				
 										</tr>
-									
 										<tr>
 										<th>预共享秘钥（可选） </th>
 				<td>
@@ -203,7 +198,6 @@ function done_validating(action){
 				</td>
 				
 										</tr>
-									
 										<tr>
 										<th>允许的IP（192.168.9.0/24,10.1.1.0/24） </th>
 				<td>
@@ -212,14 +206,14 @@ function done_validating(action){
 				
 										</tr>
 										<tr>
-										<th>对端公网IP:端口（域名） </th>
+										<th>对端公网域名或IP:端口（可选） </th>
 				<td>
 					<input type="text" class="input" name="wireguard_peerip" id="wireguard_peerip" style="width: 200px" value="<% nvram_get_x("","wireguard_peerip"); %>" />
 				</td>
 
 										</tr>
 										<tr>
-										<th>默认0，NAT后为25秒持续 </th>
+										<th>默认持续0秒，NAT后建议25（可选） </th>
 				<td>
 					<input type="text" class="input" name="wireguard_keepalive" id="wireguard_keepalive" style="width: 200px" value="<% nvram_get_x("","wireguard_keepalive"); %>" />
 				</td>
